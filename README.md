@@ -6,6 +6,29 @@
 
 This playbook installs and configures most of the software I use on my Mac for web and software development. Some things in macOS are slightly difficult to automate, so I still have a few manual installation steps, but at least it's all documented here.
 
+## My Install
+
+```
+  ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "rafael.floresta@rafa.ca"
+  cat ~/.ssh/id_ed25519.pub 
+
+ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+ brew install ansible
+  mkdir -p ~/code
+  cd ~/code
+  git clone git@github.com:rafafloresta/ansible-role-dotfiles.git
+  git clone git@github.com:rafafloresta/mac-dev-playbook.git
+  git clone git@github.com:rafafloresta/dotfiles.git
+ 
+  cd ~/code/mac-dev-playbook
+ git checkout my-setup
+ git rebase master
+
+  ansible-galaxy install -r requirements.yml
+
+ ansible-playbook main.yml --ask-become-pass
+```
+
 ## Installation
 
   1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
