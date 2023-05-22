@@ -83,8 +83,9 @@ homebrew_installed_packages:
 # commandline
   - exa
   - rg
-  - bat
+  - bat # better cat
   - tldr
+  - atuin # better history
 
 homebrew_taps:
   - homebrew/core
@@ -107,6 +108,7 @@ homebrew_cask_apps:
   - pgadmin4
   - spotify
   - google-drive
+  - blender
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
