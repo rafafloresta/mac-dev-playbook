@@ -21,6 +21,9 @@ dockitems_remove:
   - Mail
   - Messages
   - Safari
+  - Freeform
+  - Reminders
+  - Calendar
 
 dockitems_persist: 
 - name: "Sublime Text"
@@ -109,6 +112,7 @@ homebrew_cask_apps:
   - spotify
   - google-drive
   - blender
+  - ableton-live-lite
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
